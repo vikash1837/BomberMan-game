@@ -1,0 +1,45 @@
+body{
+    background-color: #000000;   
+}
+h1,h2{
+    text-align: center;
+    color: bisque;
+}
+.winner {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .9);
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 5rem;
+    flex-direction: column;
+    animation-name: winAnimation;
+    animation-duration: 6s;
+  }
+  .winner button {
+    font-size: 3rem;
+    background-color: white;
+    border: 1px solid black;
+    padding: .25em .5em;
+    cursor: pointer;
+    border-radius: 30%;
+  }
+  .winner button:hover {
+    background-color: black;
+    color: white;
+    border-color: white;
+  }
+  .winner.show {
+    display: flex;
+  }
+  @keyframes winAnimation {
+    0%   {color: red;}
+   25%  {color: yellow;}
+   50%  {color: blue;}
+   100% {color: greenyellow;}
+  }
